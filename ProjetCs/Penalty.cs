@@ -26,7 +26,7 @@ public abstract class Penalty
         {
             if (duration < 0)
             {
-                throw new Exception("Valeurs inférieure à 0")
+                throw new Exception("Valeurs inférieure à 0");
             }
             duration = value;
         }
