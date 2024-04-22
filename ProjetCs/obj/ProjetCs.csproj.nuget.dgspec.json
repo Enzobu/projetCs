@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lekik\\OneDrive - Ifag Paris\\SN2\\Semestre 2\\cours\\Projet C#\\ProjetCs\\ProjetCs\\ProjetCs.csproj": {}
+    "C:\\Users\\Yanis\\OneDrive - Ifag Paris\\Documents\\SN2\\Projet C#\\projetCs\\ProjetCs\\ProjetCs.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lekik\\OneDrive - Ifag Paris\\SN2\\Semestre 2\\cours\\Projet C#\\ProjetCs\\ProjetCs\\ProjetCs.csproj": {
+    "C:\\Users\\Yanis\\OneDrive - Ifag Paris\\Documents\\SN2\\Projet C#\\projetCs\\ProjetCs\\ProjetCs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lekik\\OneDrive - Ifag Paris\\SN2\\Semestre 2\\cours\\Projet C#\\ProjetCs\\ProjetCs\\ProjetCs.csproj",
+        "projectUniqueName": "C:\\Users\\Yanis\\OneDrive - Ifag Paris\\Documents\\SN2\\Projet C#\\projetCs\\ProjetCs\\ProjetCs.csproj",
         "projectName": "ProjetCs",
-        "projectPath": "C:\\Users\\lekik\\OneDrive - Ifag Paris\\SN2\\Semestre 2\\cours\\Projet C#\\ProjetCs\\ProjetCs\\ProjetCs.csproj",
-        "packagesPath": "C:\\Users\\lekik\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lekik\\OneDrive - Ifag Paris\\SN2\\Semestre 2\\cours\\Projet C#\\ProjetCs\\ProjetCs\\obj\\",
+        "projectPath": "C:\\Users\\Yanis\\OneDrive - Ifag Paris\\Documents\\SN2\\Projet C#\\projetCs\\ProjetCs\\ProjetCs.csproj",
+        "packagesPath": "C:\\Users\\Yanis\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Yanis\\OneDrive - Ifag Paris\\Documents\\SN2\\Projet C#\\projetCs\\ProjetCs\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\lekik\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Yanis\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,6 +32,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -48,12 +53,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.1, 8.0.1]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.1, 8.0.1]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.1, 8.0.1]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-preview.2.24157.14/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
