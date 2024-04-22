@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8120eaeb-054e-48e3-b470-a2f91001615d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetCs/obj/Debug/net8.0/ProjetCs.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetCs/obj/Debug/net8.0/ProjetCs.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetCs/obj/Debug/net8.0/ProjetCs.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetCs/obj/Debug/net8.0/ProjetCs.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetCs/obj/Debug/net8.0/ProjetCs.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetCs/obj/Debug/net8.0/ProjetCs.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetCs/obj/Debug/net8.0/ProjetCs.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetCs/obj/Debug/net8.0/ProjetCs.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetCs/obj/ProjetCs.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetCs/obj/ProjetCs.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetCs/obj/ProjetCs.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetCs/obj/ProjetCs.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetCs/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetCs/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetCs/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetCs/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetCs/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetCs/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetCs/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetCs/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetCs/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetCs/obj/rider.project.restore.info" afterDir="false" />
-    </list>
+    <list default="true" id="8120eaeb-054e-48e3-b470-a2f91001615d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,7 +51,7 @@
       <option name="presentableId" value="Default" />
       <updated>1712666637106</updated>
       <workItem from="1712666639360" duration="638000" />
-      <workItem from="1713787885682" duration="1958000" />
+      <workItem from="1713787885682" duration="2581000" />
     </task>
     <servers />
   </component>
