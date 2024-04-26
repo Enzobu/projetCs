@@ -30,7 +30,7 @@ public class Compagny
         get => iban;
         set
         {
-            if (iban.Length != 27)
+            if (value.Length != 27)
             {
                 throw new FormatException("IBAN invalide");
             }

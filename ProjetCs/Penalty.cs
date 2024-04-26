@@ -24,7 +24,7 @@ public abstract class Penalty
         get => duration;
         private set
         {
-            if (duration < 0)
+            if (value < 0)
             {
                 throw new Exception("Valeurs inférieure à 0");
             }
