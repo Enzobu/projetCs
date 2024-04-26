@@ -4,49 +4,49 @@ public class StepRaceRegisteredBoat
 {
     #region Attributes
     
-    private int idBoat;
-    private int idPenalty;
-    private int idRoad;
-    private int idStep;
+    private object boat;
+    private object penalty;
+    private object road;
+    private object step;
     
     #endregion
 
     #region GetterSetter
 
-    public int IdBoat
+    public object Boat
     {
-        get => idBoat;
-        set => idBoat = value;
+        get => boat;
+        set => boat = value;
     }
 
-    public int IdPenalty
+    public object Penalty
     {
-        get => idPenalty;
-        set => idPenalty = value;
+        get => penalty;
+        set => penalty = value;
     }
 
-    public int IdRoad
+    public object Road
     {
-        get => idRoad;
-        set => idRoad = value;
+        get => road;
+        set => road = value;
     }
 
-    public int IdStep
+    public object Step
     {
-        get => idStep;
-        set => idStep = value;
+        get => step;
+        set => step = value;
     }
 
     #endregion
     
     #region Constructor
 
-    public StepRaceRegisteredBoat(int idBoat, int idPenalty, int idRoad, int idStep)
+    public StepRaceRegisteredBoat(object boat, object penalty, object road, object step)
     {
-        IdBoat = idBoat;
-        IdPenalty = idPenalty;
-        IdRoad = idRoad;
-        IdStep = idStep;
+        Boat = boat;
+        Penalty = penalty;
+        Road = road;
+        Step = step;
     }
 
     #endregion
