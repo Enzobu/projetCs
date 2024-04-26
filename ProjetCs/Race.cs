@@ -8,7 +8,8 @@ public class Race
     private double startLongitudePoint;
     private double endLatitudePoint;
     private double endLongitudePoint;
-    private string sponsor;
+    private List<Step> listStep = [];
+    private List<Participant> listParticipant = [];
 
     #endregion
 
@@ -19,10 +20,12 @@ public class Race
         get => startLatitudePoint;
         set
         {
-            if (startLatitudePoint == 0 || startLatitudePoint == null)
+            if (value == 0 || value == null)
             {
                 throw new Exception("Entrez une valeur correcte");
             }
+
+            startLatitudePoint = value;
         }
     }
 
@@ -31,10 +34,12 @@ public class Race
         get => startLongitudePoint;
         set
         {
-            if (startLongitudePoint == 0 || startLongitudePoint == null)
+            if (value == 0 || value == null)
             {
                 throw new Exception("Entrez une valeur correcte");
             }
+
+            startLatitudePoint = value;
         }
     }
 
@@ -43,10 +48,12 @@ public class Race
         get => endLatitudePoint;
         set
         {
-            if (endLatitudePoint == 0 || endLatitudePoint == null)
+            if (value == 0 || value == null)
             {
                 throw new Exception("Entrez une valeur correcte");
             }
+
+            endLongitudePoint = value;
         }
     }
 
@@ -55,30 +62,57 @@ public class Race
         get => endLongitudePoint;
         set
         {
-            if (endLongitudePoint == 0 || endLongitudePoint == null)
+            if (value == 0 || value == null)
             {
                 throw new Exception("Entrez une valeur correcte");
             }
+
+            endLongitudePoint = value;
         }
     }
-
-    public string Sponsor
+    
+    public List<Step> ListStep
     {
-        get => sponsor;
-        set => sponsor = value ?? throw new ArgumentNullException(nameof(value));
+        get => listStep;
+        set => listStep = value ?? throw new ArgumentNullException(nameof(value));
     }
 
+    public List<Participant> ListParticipant
+    {
+        get => listParticipant;
+        set => listParticipant = value ?? throw new ArgumentNullException(nameof(value));
+    }
+
+    #endregion
+    
+    #region Method
+
+    public void SetStep(List<Step> listStep)
+    {
+        foreach (var step in listStep)
+        {
+            this.listStep.Add(step);
+        }
+    }
+    
+    public void SetParticipant(List<Participant> listParticipant)
+    {
+        foreach (var participant in listParticipant)
+        {
+            this.listParticipant.Add(participant);
+        }
+    }
+    
     #endregion
 
     #region Constructor
 
-    public Race(double startLatitudePoint, double startLongitudePoint, double endLatitudePoint, double endLongitudePoint, string sponsor)
+    public Race(double startLatitudePoint, double startLongitudePoint, double endLatitudePoint, double endLongitudePoint)
     {
         StartLatitudePoint = startLatitudePoint;
         StartLongitudePoint = startLongitudePoint;
         EndLatitudePoint = endLatitudePoint;
         EndLongitudePoint = endLongitudePoint;
-        Sponsor = sponsor;
     }
 
     #endregion
