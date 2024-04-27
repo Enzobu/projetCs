@@ -56,7 +56,7 @@ public class Boat
     public void Presentation()
     {
         string crew = CrewToString();
-        Console.WriteLine("$ nom du bateau : {0}, équipage : {1}", this.id, crew);
+        Console.WriteLine("nom du bateau : {0}, équipage : {1}", this.id, crew);
     } 
     
     public void AddUsers(List<User> listUsers)
