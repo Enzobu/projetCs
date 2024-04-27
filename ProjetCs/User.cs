@@ -76,6 +76,11 @@ public abstract class User
         return age;
     }
 
+    public void Presentation()
+    {
+        Console.WriteLine("id : {0}, firstName : {1}, lastName : {2}", this.id, this.firstName, this.lastName);
+    }
+
     #endregion
 
     #region Constuctors
