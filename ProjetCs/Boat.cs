@@ -7,6 +7,7 @@ public class Boat
     private int id;
     private string name;
     private List<User> listUser = [];
+    private List<Compagny> listCompagny = [];
 
     #endregion
 
@@ -38,6 +39,12 @@ public class Boat
         set => listUser = value ?? throw new ArgumentNullException(nameof(value));
     }
 
+    public List<Compagny> ListCompagny
+    {
+        get => listCompagny;
+        set => listCompagny = value ?? throw new ArgumentNullException(nameof(value));
+    }
+
     #endregion
     
     #region Methods
@@ -53,11 +60,25 @@ public class Boat
         return user;
     }
 
+    public string CompagnyToString()
+    {
+        string compagny = "";
+        foreach (var compagnies in listCompagny)
+        {
+            compagny += compagnies.Nom + ", ";
+        }
+
+        return compagny;
+    }
+
     public void Presentation()
     {
         string crew = CrewToString();
-        Console.WriteLine("nom du bateau : {0}, équipage : {1}", this.id, crew);
-    } 
+        string compagny = CompagnyToString();
+        Console.WriteLine("nom du bateau : {0}, équipage : {1}, sponsor : {2}", this.id, crew, compagny);
+    }
+
+    #region CRUD User
     
     public void AddUsers(List<User> listUsers)
     {
@@ -84,12 +105,47 @@ public class Boat
         if (user != null)
         {
             listUser.Remove(user);
-            Console.WriteLine("utilisateur {0} supprimé avec succès");
+            Console.WriteLine($"utilisateur {user.FirstName} {user.LastName} a été supprimé du bateau {this.name}");
             return true;
         }
 
         throw new Exception($"l'utilisateur avec l'id {id} est introuvale");
     }
+    
+    #endregion
+
+    #region CRUD Compagnies
+
+    public void AddCompagny(List<Compagny> addCompagnyList)
+    {
+        foreach (var compagny in addCompagnyList)
+        {
+            listCompagny.Add(compagny);
+            Console.WriteLine($"l'entreprise {compagny.Nom} a été ajouté comme sponsor au bateau {this.name}");
+        }
+    }
+
+    public Compagny SearchCompagny(int id)
+    {
+        return listCompagny.Find(c => c.Id == id);
+    }
+
+    public bool deleteCompagny(int id)
+    {
+        Compagny compagny = SearchCompagny(id);
+        if (compagny != null)
+        {
+            listCompagny.Remove(compagny);
+            Console.WriteLine($"le sponsor {compagny.Nom} a été supprimé pour le bateau {this.name}");
+            return true;
+        }
+
+        throw new Exception($"le sponsor avec l'id {compagny.Id} est introuvable");
+    }
+
+    #endregion
+    
+    
     
     #endregion
     

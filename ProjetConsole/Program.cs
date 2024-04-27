@@ -20,17 +20,26 @@ Step step4 = new Step(4, "Etape de la rabe", 100.0, 100.0);
 
 List<Step> listStep = new List<Step> {step1, step2, step3, step4};
 
-// Compagny Nike = new Compagny(1, "adidas", "FR7610057191570002025600271");
+//création entreprise
+Compagny Adidas = new Compagny(1, "adidas", "FR7610057191570002025600271");
+List<Compagny> listCompagny = new List<Compagny> { Adidas };
 
 //création course
 Race FirstRace = new Race(100.0, 100.0, 100.0, 100.0, new DateTime(2024,04,29));
 
 //création bateau
 Boat Boat1 = new Boat(1, "MarcoPolo");
+
+//équipage
 List<User> Equipage = new List<User> { Enzo, Louis, Charlie, JeanLuc };
+
+//test méthode
 Boat1.AddUsers(Equipage);
 Boat1.DeleteUser(2);
+Boat1.AddCompagny(listCompagny);
+
 Boat1.Presentation();
 
 //inscription bateau
 RegisteredBoat Boat1Registered = new RegisteredBoat(Boat1.Id, Boat1.Name, FirstRace);
+
