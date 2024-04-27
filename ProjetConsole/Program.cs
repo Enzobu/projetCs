@@ -24,3 +24,10 @@ List<Step> listStep = new List<Step> {step1, step2, step3, step4};
 
 //création course
 Race FirstRace = new Race(100.0, 100.0, 100.0, 100.0);
+
+//création bateau
+Boat Boat1 = new Boat(1, "MarcoPolo");
+List<User> Equipage = new List<User> { Enzo, Louis, Charlie, JeanLuc };
+Boat1.AddUsers(Equipage);
+Boat1.DeleteUser(2);
+Boat1.Presentation();

@@ -33,7 +33,7 @@ public class RegisteredBoat : Boat
 
     #region Constructors
 
-    public RegisteredBoat(int id, bool inRace, int raceTime, int realTime) : base(id)
+    public RegisteredBoat(int id, string name, bool inRace, int raceTime, int realTime) : base(id, name)
     {
         InRace = inRace;
         RaceTime = raceTime;
