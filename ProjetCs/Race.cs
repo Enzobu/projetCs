@@ -9,7 +9,8 @@ public class Race
     private double endLatitudePoint;
     private double endLongitudePoint;
     private List<Step> listStep = [];
-    private List<Participant> listParticipant = [];
+    private List<RegisteredBoat> listRegisteredBoat = [];
+    private DateTime dateRace;
 
     #endregion
 
@@ -77,17 +78,31 @@ public class Race
         set => listStep = value ?? throw new ArgumentNullException(nameof(value));
     }
 
-    public List<Participant> ListParticipant
+    public List<RegisteredBoat> ListRegisteredBoat
     {
-        get => listParticipant;
-        set => listParticipant = value ?? throw new ArgumentNullException(nameof(value));
+        get => listRegisteredBoat;
+        set => listRegisteredBoat = value ?? throw new ArgumentNullException(nameof(value));
+    }
+
+    public DateTime DateRace
+    {
+        get => dateRace;
+        set
+        {
+            if (value < DateTime.Now.AddDays(1))
+            {
+                throw new Exception("Une course ne peut pas etre crée dans le passé");
+            }
+
+            dateRace = value;
+        }
     }
 
     #endregion
     
     #region Method
 
-    public void SetStep(List<Step> listStep)
+    public void AddStep(List<Step> listStep)
     {
         foreach (var step in listStep)
         {
@@ -95,11 +110,11 @@ public class Race
         }
     }
     
-    public void SetParticipant(List<Participant> listParticipant)
+    public void AddRegisteredBoat(List<RegisteredBoat> listRegisteredBoats)
     {
-        foreach (var participant in listParticipant)
+        foreach (var boat in listRegisteredBoats)
         {
-            this.listParticipant.Add(participant);
+            this.listRegisteredBoat.Add(boat);
         }
     }
     
@@ -107,12 +122,13 @@ public class Race
 
     #region Constructor
 
-    public Race(double startLatitudePoint, double startLongitudePoint, double endLatitudePoint, double endLongitudePoint)
+    public Race(double startLatitudePoint, double startLongitudePoint, double endLatitudePoint, double endLongitudePoint, DateTime dateRace)
     {
         StartLatitudePoint = startLatitudePoint;
         StartLongitudePoint = startLongitudePoint;
         EndLatitudePoint = endLatitudePoint;
         EndLongitudePoint = endLongitudePoint;
+        DateRace = dateRace;
     }
 
     #endregion
