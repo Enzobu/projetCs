@@ -44,7 +44,6 @@ public class RegisteredBoat : Boat
                 throw new Exception("impossible de s'inscrire a une course passée");
             }
         }
-
     }
     
     #endregion
