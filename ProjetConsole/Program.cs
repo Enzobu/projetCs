@@ -25,17 +25,17 @@ Compagny Adidas = new Compagny(1, "adidas", "FR7610057191570002025600271");
 List<Compagny> listCompagny = new List<Compagny> { Adidas };
 
 //création course
-Race FirstRace = new Race(100.0, 100.0, 100.0, 100.0, new DateTime(2024,04,29));
+Race FirstRace = new Race(100.0, 100.0, 100.0, 100.0, new DateTime(2024,05,29));
 
 //création bateau
 Boat Boat1 = new Boat(1, "MarcoPolo");
 
 //équipage
-List<User> Equipage = new List<User> { Enzo, Louis, Charlie, JeanLuc };
+List<Participant> Equipage = new List<Participant> { Enzo, Louis, Charlie, JeanLuc };
 
 //test méthode
-Boat1.AddUsers(Equipage);
-Boat1.DeleteUser(2);
+Boat1.AddParticipants(Equipage);
+Boat1.DeleteParticipant(2);
 Boat1.AddCompagny(listCompagny);
 
 Boat1.Presentation();

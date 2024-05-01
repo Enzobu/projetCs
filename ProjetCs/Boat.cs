@@ -6,7 +6,7 @@ public class Boat
     
     private int id;
     private string name;
-    private List<User> listUser = [];
+    private List<Participant> listParticipant = [];
     private List<Compagny> listCompagny = [];
 
     #endregion
@@ -33,10 +33,10 @@ public class Boat
         }
     }
 
-    public List<User> ListUser
+    public List<Participant> ListParticipant
     {
-        get => listUser;
-        set => listUser = value ?? throw new ArgumentNullException(nameof(value));
+        get => listParticipant;
+        set => listParticipant = value ?? throw new ArgumentNullException(nameof(value));
     }
 
     public List<Compagny> ListCompagny
@@ -52,7 +52,7 @@ public class Boat
     public string CrewToString()
     {
         string user = "";
-        foreach (var participant in listUser)
+        foreach (var participant in listParticipant)
         {
             user += participant.FirstName + " " + participant.LastName + ", ";
         }
@@ -78,34 +78,34 @@ public class Boat
         Console.WriteLine("nom du bateau : {0}, équipage : {1}, sponsor : {2}", this.id, crew, compagny);
     }
 
-    #region CRUD User
+    #region CRUD Participant
     
-    public void AddUsers(List<User> listUsers)
+    public void AddParticipants(List<Participant> listParticipants)
     {
         //vérifier si user existe avant ajouter ???
-        if (listUsers.Count < 3 || listUsers.Count > 10)
+        if (listParticipants.Count < 3 || listParticipants.Count > 10)
         {
             throw new Exception("le nombre de participant dans le bateau doit etre compris entre 3 et 10");
         }
         
-        foreach (var user in listUsers)
+        foreach (var participant in listParticipants)
         {
-            listUser.Add(user);
+            listParticipant.Add(participant);
         }
     }
 
-    public User SearchUser(int id)
+    public Participant SearchParticipant(int id)
     {
-        return listUser.Find(u => u.Id == id);
+        return listParticipant.Find(u => u.Id == id);
     }
 
-    public bool DeleteUser(int id)
+    public bool DeleteParticipant(int id)
     {
-        User user = SearchUser(id);
-        if (user != null)
+        Participant participant = SearchParticipant(id);
+        if (participant != null)
         {
-            listUser.Remove(user);
-            Console.WriteLine($"utilisateur {user.FirstName} {user.LastName} a été supprimé du bateau {this.name}");
+            listParticipant.Remove(participant);
+            Console.WriteLine($"utilisateur {participant.FirstName} {participant.LastName} a été supprimé du bateau {this.name}");
             return true;
         }
 
