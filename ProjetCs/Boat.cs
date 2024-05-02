@@ -83,7 +83,7 @@ public class Boat
     public void AddParticipants(List<Participant> listParticipants)
     {
         //vérifier si user existe avant ajouter ???
-        if (listParticipants.Count < 3 || listParticipants.Count > 10)
+        if (listParticipant.Count > 10)
         {
             throw new Exception("le nombre de participant dans le bateau doit etre compris entre 3 et 10");
         }
