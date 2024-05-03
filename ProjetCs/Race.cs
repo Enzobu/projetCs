@@ -109,6 +109,24 @@ public class Race
             this.listStep.Add(step);
         }
     }
+
+    public Step SearchStep(int id)
+    {
+        return listStep.Find(s => s.Id == id);
+    }
+
+    public bool DeleteStep(int id)
+    {
+        Step step = SearchStep(id);
+        if (SearchStep(id) != null)
+        {
+            listStep.Remove(step);
+            Console.WriteLine($"l'étape avec l'id {id} a été supprimé");
+            return true;
+        }
+        Console.WriteLine($"la pénalité avec l'id {id} est introuvable");
+        return false;
+    }
     
     public void AddRegisteredBoat(List<RegisteredBoat> listRegisteredBoats)
     {
