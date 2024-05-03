@@ -102,6 +102,8 @@ public class Race
     
     #region Method
 
+    #region CRUD Steps
+
     public void AddStep(List<Step> listStep)
     {
         foreach (var step in listStep)
@@ -127,7 +129,11 @@ public class Race
         Console.WriteLine($"la pénalité avec l'id {id} est introuvable");
         return false;
     }
-    
+
+    #endregion
+
+    #region CRUD RegisteredBoat
+
     public void AddRegisteredBoat(List<RegisteredBoat> listRegisteredBoats)
     {
         foreach (var boat in listRegisteredBoats)
@@ -135,6 +141,27 @@ public class Race
             this.listRegisteredBoat.Add(boat);
         }
     }
+
+    public RegisteredBoat SearchRegisteredBoat(int id)
+    {
+        return listRegisteredBoat.Find(rb => rb.Id == id);
+    }
+
+    public bool DeleteRegisteredBoat(int id)
+    {
+        RegisteredBoat registeredBoat = SearchRegisteredBoat(id);
+        if (registeredBoat != null)
+        {
+            ListRegisteredBoat.Remove(registeredBoat);
+            Console.WriteLine($"le bateau {id} a bien été supprimé");
+            return true;
+        }
+        Console.WriteLine($"le bateau inscrit avec l'id {id} n'a pas été trouvé");
+        return false;
+    }
+
+    #endregion
+    
     
     #endregion
 
