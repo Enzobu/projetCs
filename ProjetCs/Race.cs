@@ -102,6 +102,24 @@ public class Race
     
     #region Method
 
+    public bool StartRace()
+    {
+        if (listRegisteredBoat.Count >= 1)
+        {
+            Random random = new Random();
+            foreach (var boat in listRegisteredBoat)
+            {
+                boat.InRace = true;
+                boat.RaceTime = random.Next(3000, 35500);
+            }
+
+            Console.WriteLine($"la course a été lancée");
+            return true;
+        }
+        Console.WriteLine($"la course ne peut pas démaréer si il n'y a pas de participant");
+        return false;
+    }
+
     #region CRUD Steps
 
     public void AddStep(List<Step> listStep)

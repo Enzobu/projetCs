@@ -30,6 +30,9 @@ Race FirstRace = new Race(100.0, 100.0, 100.0, 100.0, new DateTime(2024,05,29));
 //création bateau
 Boat Boat1 = new Boat(1, "MarcoPolo");
 
+//création bateau inscrit
+RegisteredBoat registeredBoat1 = new RegisteredBoat(1, "MarcoPolo", FirstRace);
+
 //équipage
 List<Participant> Equipage = new List<Participant> { Enzo, Louis, Charlie, JeanLuc };
 
@@ -39,6 +42,9 @@ Boat1.DeleteParticipant(2);
 Boat1.AddCompagny(listCompagny);
 
 Boat1.Presentation();
+List<RegisteredBoat> RegisteredBoat = new List<RegisteredBoat> {registeredBoat1};
+FirstRace.AddRegisteredBoat(RegisteredBoat);
+FirstRace.StartRace();
 
 //inscription bateau
 RegisteredBoat Boat1Registered = new RegisteredBoat(Boat1.Id, Boat1.Name, FirstRace);
