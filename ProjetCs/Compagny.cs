@@ -5,7 +5,7 @@ public class Compagny
     #region Attributes
 
     private int id;
-    private string nom;
+    private string name;
     private string iban;
     private List<Boat> listBoat = [];
 
@@ -19,10 +19,10 @@ public class Compagny
         set => id = value;
     }
 
-    public string Nom
+    public string Name
     {
-        get => nom;
-        set => nom = value ?? throw new ArgumentNullException(nameof(value));
+        get => name;
+        set => name = value ?? throw new ArgumentNullException(nameof(value));
     }
 
     public string Iban
@@ -57,7 +57,7 @@ public class Compagny
     public Compagny(int id, string nom, string iban)
     {
         Id = id;
-        Nom = nom;
+        Name = nom;
         Iban = iban;
     }
 

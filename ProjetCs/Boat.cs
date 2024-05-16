@@ -65,7 +65,7 @@ public class Boat
         string compagny = "";
         foreach (var compagnies in listCompagny)
         {
-            compagny += compagnies.Nom + ", ";
+            compagny += compagnies.Name + ", ";
         }
 
         return compagny;
@@ -121,7 +121,7 @@ public class Boat
         foreach (var compagny in addCompagnyList)
         {
             listCompagny.Add(compagny);
-            Console.WriteLine($"l'entreprise {compagny.Nom} a été ajouté comme sponsor au bateau {this.name}");
+            Console.WriteLine($"l'entreprise {compagny.Name} a été ajouté comme sponsor au bateau {this.name}");
         }
     }
 
@@ -136,7 +136,7 @@ public class Boat
         if (compagny != null)
         {
             listCompagny.Remove(compagny);
-            Console.WriteLine($"le sponsor {compagny.Nom} a été supprimé pour le bateau {this.name}");
+            Console.WriteLine($"le sponsor {compagny.Name} a été supprimé pour le bateau {this.name}");
             return true;
         }
 
