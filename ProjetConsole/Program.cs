@@ -13,9 +13,9 @@ Participant JeanLuc = new Participant(4, "Bompard", "Jean-Luc", new DateTime(201
 
 
 //création etapes
-Step step1 = new Step(1, "Etape de la mort", 100.0, 100.0);
-Step step2 = new Step(2, "Etape de la vie", 100.0, 100.0);
-Step step3 = new Step(3, "Etape de la sertitude", 100.0, 100.0);
+Step step1 = new Step(1, "Etape compliquée", 100.0, 100.0);
+Step step2 = new Step(2, "Etape un peu plus compliquée que l'étape d'avant", 100.0, 100.0);
+Step step3 = new Step(3, "Etape encore un peu plus compliquée que l'étape d'avant qui était elle-même plus compliquée que celle encore d'avant", 100.0, 100.0);
 Step step4 = new Step(4, "Etape de la rabe", 100.0, 100.0);
 
 List<Step> listStep = new List<Step> {step1, step2, step3, step4};
