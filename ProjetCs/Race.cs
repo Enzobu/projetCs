@@ -104,20 +104,26 @@ public class Race
 
     public bool StartRace()
     {
-        if (listRegisteredBoat.Count >= 1)
+        if (listRegisteredBoat.Count <= 1)
         {
-            Random random = new Random();
-            foreach (var boat in listRegisteredBoat)
-            {
-                boat.InRace = true;
-                boat.RaceTime = random.Next(3000, 35500);
-            }
-
-            Console.WriteLine($"la course a été lancée");
-            return true;
+            Console.WriteLine($"la course ne peut pas démaréer si il n'y a pas de participant");
+            return false;
         }
-        Console.WriteLine($"la course ne peut pas démaréer si il n'y a pas de participant");
-        return false;
+        
+        if (listStep.Count <= 1)
+        {
+            Console.WriteLine($"La course ne peut pas démarer si il n'y a pas au moins une étape");
+            return false;
+        }
+        Random random = new Random();
+        foreach (var boat in listRegisteredBoat)
+        {
+            boat.InRace = true;
+            boat.RaceTime = random.Next(3000, 35500);
+        }
+
+        Console.WriteLine($"la course a été lancée");
+        return true;
     }
 
     #region CRUD Steps

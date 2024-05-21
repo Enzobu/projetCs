@@ -36,6 +36,13 @@ RegisteredBoat registeredBoat1 = new RegisteredBoat(1, "MarcoPolo", FirstRace);
 //équipage
 List<Participant> Equipage = new List<Participant> { Enzo, Louis, Charlie, JeanLuc };
 
+//inscription a une course
+List<RegisteredBoat> registeredBoats = new List<RegisteredBoat> { registeredBoat1 };
+FirstRace.AddRegisteredBoat(registeredBoats);
+
+//ajout des étapes à une course
+FirstRace.AddStep(listStep);
+
 //test méthode
 Boat1.AddParticipants(Equipage);
 Boat1.DeleteParticipant(2);
