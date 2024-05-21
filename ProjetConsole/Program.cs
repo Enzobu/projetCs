@@ -1,9 +1,13 @@
 ﻿using ProjetCs;
 using System;
 using System.Collections.Generic;
+using Penalty = ProjetCs.Penalty;
 
 //création employé
 Employee Yanis = new Employee(1, "Capelle", "Yanis", new DateTime(2004, 08, 19), "Président");
+
+//création pénalité
+Penalty penalty1 = new Penalty(1, 1000, 1000.0, 1000.0);
 
 //création participant
 Participant Enzo = new Participant(1, "Palermo", "Enzo", new DateTime(1952, 12, 8));
@@ -56,3 +60,6 @@ RegisteredBoat Boat1Registered = new RegisteredBoat(Boat1.Id, Boat1.Name, FirstR
 //afficher le classement de la course
 string ranking = FirstRace.printRanking();
 Console.WriteLine(ranking);
+
+//donner pénalités
+new StepRaceRegisteredBoat(registeredBoat1, )

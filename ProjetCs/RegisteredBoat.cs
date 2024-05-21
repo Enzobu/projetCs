@@ -26,6 +26,7 @@ public class RegisteredBoat : Boat
 
     public int RealTime
     {
+        get => realTime;
         set => realTime = 0;
         //set raceTime + Penalty.duration
     }

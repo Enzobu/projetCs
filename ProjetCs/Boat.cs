@@ -145,8 +145,6 @@ public class Boat
 
     #endregion
     
-    
-    
     #endregion
     
     #region Constructor

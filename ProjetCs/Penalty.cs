@@ -1,6 +1,6 @@
 namespace ProjetCs;
 
-public abstract class Penalty
+public class Penalty
 {
     #region Attributes
 
@@ -54,7 +54,7 @@ public abstract class Penalty
 
     #region Constuctors
 
-    protected Penalty(int code, int duration, double longitude, double latitude)
+    public Penalty(int code, int duration, double longitude, double latitude)
     {
         Code = code;
         Duration = duration;
