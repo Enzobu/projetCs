@@ -32,13 +32,10 @@ Boat Boat1 = new Boat(1, "MarcoPolo");
 
 //création bateau inscrit
 RegisteredBoat registeredBoat1 = new RegisteredBoat(1, "MarcoPolo", FirstRace);
+RegisteredBoat registeredBoat2 = new RegisteredBoat(2, "Black Pearl", FirstRace);
 
 //équipage
 List<Participant> Equipage = new List<Participant> { Enzo, Louis, Charlie, JeanLuc };
-
-//inscription a une course
-List<RegisteredBoat> registeredBoats = new List<RegisteredBoat> { registeredBoat1 };
-FirstRace.AddRegisteredBoat(registeredBoats);
 
 //ajout des étapes à une course
 FirstRace.AddStep(listStep);
@@ -49,10 +46,13 @@ Boat1.DeleteParticipant(2);
 Boat1.AddCompagny(listCompagny);
 
 Boat1.Presentation();
-List<RegisteredBoat> RegisteredBoat = new List<RegisteredBoat> {registeredBoat1};
+List<RegisteredBoat> RegisteredBoat = new List<RegisteredBoat> {registeredBoat1, registeredBoat2};
 FirstRace.AddRegisteredBoat(RegisteredBoat);
 FirstRace.StartRace();
 
 //inscription bateau
 RegisteredBoat Boat1Registered = new RegisteredBoat(Boat1.Id, Boat1.Name, FirstRace);
 
+//afficher le classement de la course
+string ranking = FirstRace.printRanking();
+Console.WriteLine(ranking);

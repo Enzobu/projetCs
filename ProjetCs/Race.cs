@@ -126,6 +126,30 @@ public class Race
         return true;
     }
 
+    public string printRanking()
+    {
+        if (dateRace < DateTime.Now)
+        {
+            return "pour afficher le classement d'une course, elle doit etre passée";
+        }
+
+        string ranking = "";
+        int position = 1;
+
+        if (listRegisteredBoat.Count > 1)
+        {
+            listRegisteredBoat.Sort((boat1, boat2) => boat1.RaceTime.CompareTo(boat2.RaceTime));
+        }
+        
+        foreach (var boat in listRegisteredBoat)
+        {
+            ranking += $"{position} - {boat.Name} - {boat.RaceTime} \n";
+            position += 1;
+        }
+
+        return ranking;
+    }
+
     #region CRUD Steps
 
     public void AddStep(List<Step> listStep)
