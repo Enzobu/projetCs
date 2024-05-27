@@ -138,12 +138,12 @@ public class Race
 
         if (listRegisteredBoat.Count > 1)
         {
-            listRegisteredBoat.Sort((boat1, boat2) => boat1.RaceTime.CompareTo(boat2.RaceTime));
+            listRegisteredBoat.Sort((boat1, boat2) => boat1.RealTime.CompareTo(boat2.RaceTime));
         }
         
         foreach (var boat in listRegisteredBoat)
         {
-            ranking += $"{position} - {boat.Name} - {boat.RaceTime} \n";
+            ranking += $"{position} - {boat.Name} - {boat.RealTime} \n";
             position += 1;
         }
 
