@@ -4,7 +4,7 @@ public class StepRaceRegisteredBoat
 {
     #region Attributes
     
-    private object boat;
+    private object registeredBoat;
     private object penalty;
     private object road;
     private object step;
@@ -13,10 +13,10 @@ public class StepRaceRegisteredBoat
 
     #region GetterSetter
 
-    public object Boat
+    public object RegisteredBoat
     {
-        get => boat;
-        set => boat = value;
+        get => registeredBoat;
+        set => registeredBoat = value;
     }
 
     public object Penalty
@@ -41,9 +41,9 @@ public class StepRaceRegisteredBoat
     
     #region Constructor
 
-    public StepRaceRegisteredBoat(object boat, object penalty, object road, object step)
+    public StepRaceRegisteredBoat(object registeredBoat, object penalty, object road, object step)
     {
-        Boat = boat;
+        RegisteredBoat = registeredBoat;
         Penalty = penalty;
         Road = road;
         Step = step;
