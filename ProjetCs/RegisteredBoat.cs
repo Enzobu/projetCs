@@ -8,6 +8,7 @@ public class RegisteredBoat : Boat
     private int raceTime;
     private int realTime;
     private object race;
+    private List<Penalty> listPenalty = [];
     
     #endregion
     
@@ -26,9 +27,14 @@ public class RegisteredBoat : Boat
 
     public int RealTime
     {
-        get => realTime;
-        set => realTime = 0;
-        //set raceTime + Penalty.duration
+        get => CalculateRealTime();
+        set => CalculateRealTime();
+    }
+
+    public List<Penalty> ListPenalty
+    {
+        get => listPenalty;
+        set => listPenalty = value ?? throw new ArgumentNullException(nameof(value));
     }
 
     public object Race
@@ -48,6 +54,42 @@ public class RegisteredBoat : Boat
     }
     
     #endregion
+    
+    #region méthods
+
+    public bool GivePenalty(Penalty penalty)
+    {
+        foreach (var penaltyItem in listPenalty)
+        {
+            if (penalty.Code == penaltyItem.Code)
+            {
+                return false;
+            }
+        }
+        listPenalty.Add(penalty);
+
+        return true;
+    }
+
+    public void RemovePenalty(Penalty penalty)
+    {
+        listPenalty.Remove(penalty);
+    }
+
+    private int CalculateRealTime()
+    {
+        int realTimeToSet = raceTime;
+            
+        foreach (var penalty in listPenalty)
+        {
+            realTimeToSet += penalty.Duration;
+        }
+
+        return realTimeToSet;
+
+    }
+    
+    #endregion
 
     #region Constructors
 
@@ -55,7 +97,6 @@ public class RegisteredBoat : Boat
     {
         InRace = inRace;
         RaceTime = raceTime;
-        //RealTime = this.GetRealTime();
         Race = race;
     }
 

@@ -8,6 +8,8 @@ Employee Yanis = new Employee(1, "Capelle", "Yanis", new DateTime(2004, 08, 19),
 
 //création pénalité
 Penalty penalty1 = new Penalty(1, 1000, 1000.0, 1000.0);
+Penalty penalty2 = new Penalty(1, 1000, 1000.0, 1000.0);
+
 
 //création participant
 Participant Enzo = new Participant(1, "Palermo", "Enzo", new DateTime(1952, 12, 8));
@@ -61,5 +63,11 @@ RegisteredBoat Boat1Registered = new RegisteredBoat(Boat1.Id, Boat1.Name, FirstR
 string ranking = FirstRace.printRanking();
 Console.WriteLine(ranking);
 
+//test pénalités 
+Console.WriteLine($"{ registeredBoat1.RaceTime }, { registeredBoat1.RealTime }");
+
 //donner pénalités
-new StepRaceRegisteredBoat(registeredBoat1, )
+registeredBoat1.GivePenalty(penalty1);
+//registeredBoat1.GivePenalty(penalty2);
+registeredBoat1.RemovePenalty(penalty1);
+Console.WriteLine($"{ registeredBoat1.RaceTime }, { registeredBoat1.RealTime }");
