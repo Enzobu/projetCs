@@ -36,6 +36,7 @@ public class TestRace
         race.AddRegisteredBoat(listRegisteredBoat);
         bool result = race.StartRace();
         
+        Assert.That(result, Is.False);
     }
 
     [Test]
