@@ -61,6 +61,22 @@ namespace TestProject;
         }
 
         [Test]
+        public void TestGiveUpInRaceFalse()
+        {
+            var boat = new RegisteredBoat(45, "test", race, false, 54, 85);
+            var result = boat.GiveUp();
+            Assert.That(result, Is.False);
+        }
+        
+        [Test]
+        public void TestGiveUpInRaceTrue()
+        {
+            var boat = new RegisteredBoat(45, "test", race, true, 54, 85);
+            var result = boat.GiveUp();
+            Assert.That(result, Is.True);
+        }
+        
+        [Test]
         public void TestCalculateRealTimeWithPenalties()
         {
             registeredBoat.RaceTime = 100;

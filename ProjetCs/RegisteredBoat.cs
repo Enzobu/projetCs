@@ -88,6 +88,17 @@ public class RegisteredBoat : Boat
         return realTimeToSet;
 
     }
+
+    public bool GiveUp()
+    {
+        if (InRace == false)
+        {
+            return false;
+        }
+
+        InRace = false;
+        return true;
+    }
     
     #endregion
 
