@@ -3,5 +3,10 @@
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;NUnit3x::4E331840-71C1-4D4C-99F9-43F7622887CA::net8.0::TestProject.TestBoat&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::4E331840-71C1-4D4C-99F9-43F7622887CA::net8.0::TestProject.TestRegisteredBoat&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::4E331840-71C1-4D4C-99F9-43F7622887CA::net8.0::TestProject.TestRace.TestStartRaceWith0Boat&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::4E331840-71C1-4D4C-99F9-43F7622887CA::net8.0::TestProject.TestRace.TestStartRaceWith0Step&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::4E331840-71C1-4D4C-99F9-43F7622887CA::net8.0::TestProject.TestRace.TestStartRaceWithStepAndBoat&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::4E331840-71C1-4D4C-99F9-43F7622887CA::net8.0::TestProject.TestRace.TestSetAttributesRaceTime&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::4E331840-71C1-4D4C-99F9-43F7622887CA::net8.0::TestProject.TestRace.TestSetAttributesRealTime&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

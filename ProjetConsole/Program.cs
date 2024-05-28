@@ -31,7 +31,7 @@ Compagny Adidas = new Compagny(1, "adidas", "FR7610057191570002025600271");
 List<Compagny> listCompagny = new List<Compagny> { Adidas };
 
 //création course
-Race FirstRace = new Race(100.0, 100.0, 100.0, 100.0, new DateTime(2024,05,29));
+Race FirstRace = new Race(100.0, 100.0, 100.0, 100.0, new DateTime(2024,05,30));
 
 //création bateau
 Boat Boat1 = new Boat(1, "MarcoPolo");
