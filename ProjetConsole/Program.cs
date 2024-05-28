@@ -15,8 +15,8 @@ Penalty penalty2 = new Penalty(1, 1000, 1000.0, 1000.0);
 Participant Enzo = new Participant(1, "Palermo", "Enzo", new DateTime(1952, 12, 8));
 Participant Louis = new Participant(2, "Nectoux", "Louis", new DateTime(1952, 12, 8));
 Participant Charlie = new Participant(3, "Petre", "Charlie", new DateTime(1952, 12, 8));
-Participant JeanLuc = new Participant(4, "Bompard", "Jean-Luc", new DateTime(201, 12, 8));
-
+Participant JeanLuc = new Participant(4, "Bompard", "Jean-Luc", new DateTime(1612, 12, 8));
+Console.WriteLine(JeanLuc.Age());
 
 //création etapes
 Step step1 = new Step(1, "Etape compliquée", 100.0, 100.0);

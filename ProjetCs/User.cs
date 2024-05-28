@@ -81,6 +81,13 @@ public abstract class User
         Console.WriteLine("id : {0}, firstName : {1}, lastName : {2}", this.id, this.firstName, this.lastName);
     }
 
+    public string Age()
+    {
+        DateTime now = DateTime.Today;
+        int age = now.Year - Birthdate.Year;
+        return $"{firstName} à {age} ans";
+    }
+
     #endregion
 
     #region Constuctors

@@ -75,7 +75,7 @@ public class Boat
     {
         string crew = CrewToString();
         string compagny = CompagnyToString();
-        Console.WriteLine("nom du bateau : {0}, équipage : {1}, sponsor : {2}", this.id, crew, compagny);
+        Console.WriteLine("nom du bateau : {0}, équipage : {1} sponsor : {2}", this.id, crew, compagny);
     }
 
     #region CRUD Participant
