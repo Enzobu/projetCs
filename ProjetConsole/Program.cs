@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using Penalty = ProjetCs.Penalty;
 
+/*
+
 //création employé
 Employee Yanis = new Employee(1, "Capelle", "Yanis", new DateTime(2004, 08, 19), "Président");
 
@@ -71,3 +73,9 @@ registeredBoat1.GivePenalty(penalty1);
 //registeredBoat1.GivePenalty(penalty2);
 registeredBoat1.RemovePenalty(penalty1);
 Console.WriteLine($"{ registeredBoat1.RaceTime }, { registeredBoat1.RealTime }");
+
+*/
+
+
+// Entity Framework
+

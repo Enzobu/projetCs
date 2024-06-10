@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetConsole", "ProjetCons
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject", "TestProject\TestProject.csproj", "{4E331840-71C1-4D4C-99F9-43F7622887CA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFramework", "EntityFramework\EntityFramework.csproj", "{1D6F397D-C92F-4DDD-AF2D-A12E6B827681}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{4E331840-71C1-4D4C-99F9-43F7622887CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E331840-71C1-4D4C-99F9-43F7622887CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E331840-71C1-4D4C-99F9-43F7622887CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D6F397D-C92F-4DDD-AF2D-A12E6B827681}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D6F397D-C92F-4DDD-AF2D-A12E6B827681}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D6F397D-C92F-4DDD-AF2D-A12E6B827681}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D6F397D-C92F-4DDD-AF2D-A12E6B827681}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
