@@ -41,14 +41,14 @@ INSERT INTO boat (name, id_compagny) VALUES
                                          ('Boat 2', 2);
 
 -- Insertion des bateaux enregistrés
-INSERT INTO registredBoat (inRace, raceTime, realTime, id_boat) VALUES
-                                                                    (0, 0, 0, 1),
-                                                                    (1, 3600, 3700, 2);
+INSERT INTO registredBoat (inRace, raceTime, realTime, id_boat, id_race) VALUES
+                                                                    (0, 0, 0, 1, 1),
+                                                                    (1, 3600, 3700, 2, 2);
 
 -- Insertion des courses
-INSERT INTO race (start_point_longitude, start_point_latitude, end_point_longitude, endt_point_latitude, dateRace, id_registeredBoat) VALUES
-                                                                                                                                          ('2.3522', '48.8566', '-0.1278', '51.5074', '2024-07-01', 1),
-                                                                                                                                          ('2.3522', '48.8566', '-118.2437', '34.0522', '2024-08-01', 2);
+INSERT INTO race (start_point_longitude, start_point_latitude, end_point_longitude, endt_point_latitude, dateRace) VALUES
+                                                                                                                                          ('2.3522', '48.8566', '-0.1278', '51.5074', '2024-07-01'),
+                                                                                                                                          ('2.3522', '48.8566', '-118.2437', '34.0522', '2024-08-01');
 
 -- Insertion des participants de bateau
 INSERT INTO boat_participant (id_boat, id_user) VALUES

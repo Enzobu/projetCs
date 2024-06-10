@@ -21,6 +21,16 @@ CREATE TABLE compagny(
    UNIQUE(IBAN)
 );
 
+CREATE TABLE race(
+   id_race INT AUTO_INCREMENT,
+   start_point_longitude VARCHAR(50) ,
+   start_point_latitude VARCHAR(50) ,
+   end_point_longitude VARCHAR(50) ,
+   endt_point_latitude VARCHAR(50) ,
+   dateRace DATE NOT NULL,
+   PRIMARY KEY(id_race)
+);
+
 CREATE TABLE penalty(
    id_penalty INT AUTO_INCREMENT,
    duration INT NOT NULL,
@@ -70,22 +80,12 @@ CREATE TABLE registredBoat(
    inRace BOOLEAN NOT NULL DEFAULT 0,
    raceTime INT NOT NULL DEFAULT 0,
    realTime INT NOT NULL DEFAULT 0,
+   id_race INT NOT NULL,
    id_boat INT NOT NULL,
    PRIMARY KEY(id_registeredBoat),
    UNIQUE(id_boat),
+   FOREIGN KEY(id_race) REFERENCES race(id_race),
    FOREIGN KEY(id_boat) REFERENCES boat(id_boat)
-);
-
-CREATE TABLE race(
-   id_race INT AUTO_INCREMENT,
-   start_point_longitude VARCHAR(50) ,
-   start_point_latitude VARCHAR(50) ,
-   end_point_longitude VARCHAR(50) ,
-   endt_point_latitude VARCHAR(50) ,
-   dateRace DATE NOT NULL,
-   id_registeredBoat INT NOT NULL,
-   PRIMARY KEY(id_race),
-   FOREIGN KEY(id_registeredBoat) REFERENCES registredBoat(id_registeredBoat)
 );
 
 CREATE TABLE boat_participant(
