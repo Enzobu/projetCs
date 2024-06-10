@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace ProjetCs.Models;
+namespace EntityFramework.Models;
 
 public partial class Service2bateauContext : DbContext
 {
@@ -35,6 +35,8 @@ public partial class Service2bateauContext : DbContext
 
     public virtual DbSet<RaceBoat> RaceBoats { get; set; }
 
+    public virtual DbSet<RegisteredboatPenalty> RegisteredboatPenalties { get; set; }
+
     public virtual DbSet<Registredboat> Registredboats { get; set; }
 
     public virtual DbSet<Role> Roles { get; set; }
@@ -42,8 +44,6 @@ public partial class Service2bateauContext : DbContext
     public virtual DbSet<StapPenalty> StapPenalties { get; set; }
 
     public virtual DbSet<Step> Steps { get; set; }
-
-    public virtual DbSet<Stepraceregisteredboat> Stepraceregisteredboats { get; set; }
 
     public virtual DbSet<User> Users { get; set; }
 
@@ -161,7 +161,7 @@ public partial class Service2bateauContext : DbContext
 
             entity.ToTable("race");
 
-            entity.HasIndex(e => e.IdBoat, "id_boat");
+            entity.HasIndex(e => e.IdRegisteredBoat, "id_registeredBoat");
 
             entity.Property(e => e.IdRace).HasColumnName("id_race");
             entity.Property(e => e.DateRace)
@@ -173,7 +173,7 @@ public partial class Service2bateauContext : DbContext
             entity.Property(e => e.EndtPointLatitude)
                 .HasMaxLength(50)
                 .HasColumnName("endt_point_latitude");
-            entity.Property(e => e.IdBoat).HasColumnName("id_boat");
+            entity.Property(e => e.IdRegisteredBoat).HasColumnName("id_registeredBoat");
             entity.Property(e => e.StartPointLatitude)
                 .HasMaxLength(50)
                 .HasColumnName("start_point_latitude");
@@ -195,12 +195,27 @@ public partial class Service2bateauContext : DbContext
             entity.Property(e => e.IsRunning).HasColumnName("isRunning");
         });
 
+        modelBuilder.Entity<RegisteredboatPenalty>(entity =>
+        {
+            entity.HasKey(e => new { e.IdPenalty, e.IdRegisteredBoat }).HasName("PRIMARY");
+
+            entity.ToTable("registeredboat_penalty");
+
+            entity.HasIndex(e => e.IdRegisteredBoat, "id_registeredBoat");
+
+            entity.Property(e => e.IdPenalty).HasColumnName("id_penalty");
+            entity.Property(e => e.IdRegisteredBoat).HasColumnName("id_registeredBoat");
+        });
+
         modelBuilder.Entity<Registredboat>(entity =>
         {
-            entity.HasKey(e => e.IdBoat).HasName("PRIMARY");
+            entity.HasKey(e => e.IdRegisteredBoat).HasName("PRIMARY");
 
             entity.ToTable("registredboat");
 
+            entity.HasIndex(e => e.IdBoat, "id_boat").IsUnique();
+
+            entity.Property(e => e.IdRegisteredBoat).HasColumnName("id_registeredBoat");
             entity.Property(e => e.IdBoat).HasColumnName("id_boat");
             entity.Property(e => e.InRace).HasColumnName("inRace");
             entity.Property(e => e.RaceTime).HasColumnName("raceTime");
@@ -250,27 +265,6 @@ public partial class Service2bateauContext : DbContext
             entity.Property(e => e.Name)
                 .HasMaxLength(50)
                 .HasColumnName("name");
-        });
-
-        modelBuilder.Entity<Stepraceregisteredboat>(entity =>
-        {
-            entity.HasKey(e => e.IdStepRaceRegisteredBoat).HasName("PRIMARY");
-
-            entity.ToTable("stepraceregisteredboat");
-
-            entity.HasIndex(e => e.IdBoat, "id_boat");
-
-            entity.HasIndex(e => e.IdPenalty, "id_penalty");
-
-            entity.HasIndex(e => e.IdRace, "id_race");
-
-            entity.HasIndex(e => e.IdStep, "id_step");
-
-            entity.Property(e => e.IdStepRaceRegisteredBoat).HasColumnName("id_StepRaceRegisteredBoat");
-            entity.Property(e => e.IdBoat).HasColumnName("id_boat");
-            entity.Property(e => e.IdPenalty).HasColumnName("id_penalty");
-            entity.Property(e => e.IdRace).HasColumnName("id_race");
-            entity.Property(e => e.IdStep).HasColumnName("id_step");
         });
 
         modelBuilder.Entity<User>(entity =>

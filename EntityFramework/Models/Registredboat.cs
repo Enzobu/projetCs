@@ -1,15 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ProjetCs.Models;
+namespace EntityFramework.Models;
 
 public partial class Registredboat
 {
-    public int IdBoat { get; set; }
+    public int IdRegisteredBoat { get; set; }
 
     public bool InRace { get; set; }
 
     public int RaceTime { get; set; }
 
     public int RealTime { get; set; }
+
+    public int IdBoat { get; set; }
 }
