@@ -79,3 +79,4 @@ Console.WriteLine($"{ registeredBoat1.RaceTime }, { registeredBoat1.RealTime }")
 
 // Entity Framework
 
+
