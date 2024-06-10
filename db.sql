@@ -66,11 +66,13 @@ CREATE TABLE boat(
 );
 
 CREATE TABLE registredBoat(
-   id_boat INT,
+   id_registeredBoat INT AUTO_INCREMENT,
    inRace BOOLEAN NOT NULL DEFAULT 0,
    raceTime INT NOT NULL DEFAULT 0,
    realTime INT NOT NULL DEFAULT 0,
-   PRIMARY KEY(id_boat),
+   id_boat INT NOT NULL,
+   PRIMARY KEY(id_registeredBoat),
+   UNIQUE(id_boat),
    FOREIGN KEY(id_boat) REFERENCES boat(id_boat)
 );
 
@@ -81,22 +83,9 @@ CREATE TABLE race(
    end_point_longitude VARCHAR(50) ,
    endt_point_latitude VARCHAR(50) ,
    dateRace DATE NOT NULL,
-   id_boat INT NOT NULL,
+   id_registeredBoat INT NOT NULL,
    PRIMARY KEY(id_race),
-   FOREIGN KEY(id_boat) REFERENCES registredBoat(id_boat)
-);
-
-CREATE TABLE StepRaceRegisteredBoat(
-   id_StepRaceRegisteredBoat INT AUTO_INCREMENT,
-   id_race INT NOT NULL,
-   id_boat INT NOT NULL,
-   id_step INT NOT NULL,
-   id_penalty INT NOT NULL,
-   PRIMARY KEY(id_StepRaceRegisteredBoat),
-   FOREIGN KEY(id_race) REFERENCES race(id_race),
-   FOREIGN KEY(id_boat) REFERENCES registredBoat(id_boat),
-   FOREIGN KEY(id_step) REFERENCES step(id_step),
-   FOREIGN KEY(id_penalty) REFERENCES penalty(id_penalty)
+   FOREIGN KEY(id_registeredBoat) REFERENCES registredBoat(id_registeredBoat)
 );
 
 CREATE TABLE boat_participant(
@@ -138,4 +127,12 @@ CREATE TABLE stap_penalty(
    PRIMARY KEY(id_penalty, id_step),
    FOREIGN KEY(id_penalty) REFERENCES penalty(id_penalty),
    FOREIGN KEY(id_step) REFERENCES step(id_step)
+);
+
+CREATE TABLE registeredBoat_penalty(
+   id_penalty INT,
+   id_registeredBoat INT,
+   PRIMARY KEY(id_penalty, id_registeredBoat),
+   FOREIGN KEY(id_penalty) REFERENCES penalty(id_penalty),
+   FOREIGN KEY(id_registeredBoat) REFERENCES registredBoat(id_registeredBoat)
 );
